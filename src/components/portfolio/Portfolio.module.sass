@@ -1,0 +1,73 @@
+.portfolio
+    width: 100%
+    height: fit-content
+    display: flex
+    justify-content: center
+    overflow: hidden
+
+
+    >div // Content
+        flex-direction: column
+        align-items: flex-start
+        &::before
+            content: ''
+            position: relative
+            top: 300px
+            left: 65%
+            display: flex
+            width: 1px
+            height: 1px
+            background: rgba(#D6C8FF,60%)
+            box-shadow: 1px 1px 250px 200px rgba(#D6C8FF,60%)
+            pointer-events: none
+            z-index: -9
+            
+
+
+        >div:nth-child(1)
+            display: flex
+            flex-direction: column
+            align-self: flex-start
+            h2
+                &::before
+                    content: ''
+                    position: relative
+                    top: 300px
+                    left: -50%
+                    display: flex
+                    width: 1px
+                    height: 1px
+                    background: rgba(#D6C8FF,50%)
+                    box-shadow: 1px 1px 250px 200px rgba(#D6C8FF,50%)
+                    pointer-events: none
+                    z-index: -9
+
+        >div:nth-child(2)
+            width: 1024px
+            margin: 64px 0px
+            align-self: center
+            img
+                width: 1024px
+                height: auto
+                @media screen and (max-width: 1023px)
+                    width: 600px
+                @media screen and (max-width: 600px)
+                    width: 360px
+
+        >div:nth-child(3)
+            display: flex
+            flex-direction: column
+            align-self: flex-end
+            h2
+                &::before
+                    content: ''
+                    position: relative
+                    top: -300px
+                    left: 170%
+                    display: flex
+                    width: 1px
+                    height: 1px
+                    background: rgba(#D6C8FF,50%)
+                    box-shadow: 1px 1px 250px 200px rgba(#D6C8FF,50%)
+                    pointer-events: none
+                    z-index: -9

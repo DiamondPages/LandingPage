@@ -1,0 +1,71 @@
+.benefits
+    width: 100%
+    height: fit-content
+    display: flex
+    justify-content: center
+    overflow: hidden
+
+    >div
+        flex-direction: column
+        align-items: flex-start
+        border-left: 1px solid rgba(white,.1)
+        border-right: 1px solid rgba(white,.1)
+
+        
+    h2
+        margin-bottom: 16px
+        &::before
+            content: ''
+            position: relative
+            left: -15%
+            bottom: 50px
+            display: flex
+            width: 1px
+            height: 1px
+            background: rgba(#6F53C1,50%)
+            box-shadow: 1px 1px 250px 200px rgba(#6F53C1,35%)
+            pointer-events: none
+            z-index: -9
+
+    .benefitsContainer
+        display: flex
+        margin-top: 64px
+
+        @media screen and (max-width: 1279px)
+            justify-content: center
+            flex-wrap: wrap
+
+
+        .benefitCard
+            p
+                font-weight: 300
+
+            img
+                height: 40px
+                width: fit-content !important
+
+            display: flex
+            flex-direction: column
+            gap: 16px
+            width: 320px
+            padding: 64px 32px
+            border: 1px solid rgba(white,.1)
+            transition: 0.25s
+            &:hover
+                background: rgba(white,.05)
+
+            &:nth-child(4)
+                &::after
+                    content: ''
+                    position: relative
+                    left: 120%
+                    display: flex
+                    width: 1px
+                    height: 1px
+                    background: rgba(#6F53C1,50%)
+                    box-shadow: 1px 1px 250px 200px rgba(#6F53C1,35%)
+                    pointer-events: none
+                    z-index: -9
+
+
+

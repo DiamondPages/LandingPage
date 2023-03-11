@@ -1,0 +1,30 @@
+.faqquestion
+    transition: .3s
+    cursor: pointer
+    width: 900px
+    @media screen and (max-width: 1024px)
+        width: calc( 100vw - 32px )
+
+    span
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 8px
+        padding: 16px 16px
+        background: #d1d1d1
+        transition: .3s
+
+        svg
+            transition: .3s
+            width: auto
+            height: 16px
+            vertical-align: middle
+            fill: #1c1c1c
+            overflow: hidden
+            pointer-events: none
+
+    p
+        padding: 16px
+        width: fit-content
+        transition: all .3s
+        pointer-events: none

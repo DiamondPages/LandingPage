@@ -1,0 +1,26 @@
+.header
+    height: 96px
+    width: 100%
+    display: flex
+    position: absolute
+    align-items: center
+    justify-content: center
+    gap: 8px
+
+    span,img
+        z-index: 99
+
+    @media screen and (max-width: 500px)
+        height: 64px
+        img
+            width: 48px
+            height: auto
+
+
+    span
+        font-size: 24px
+        @media screen and (max-width: 500px)
+            font-size: 18px
+        
+        font-weight: 300
+

@@ -1,0 +1,69 @@
+.projectContainer
+    margin-top: -200px
+    .desktop
+        border: 2px solid #0e0e0e
+
+        width: 574px !important
+        height: 365px !important
+        object-fit: cover
+        position: relative
+        object-position: top
+        top: -130px
+        left: -155px
+        transform: scale(.85) perspective(2000px) rotateY(42deg) rotateX(10deg) rotateZ(-1deg)
+        @media screen and (max-width: 1023px)
+            transform: scale(.50) perspective(2000px) rotateY(42deg) rotateX(10deg) rotateZ(-1deg)
+            top: -210px
+            left: 0px
+
+
+        @media screen and (max-width: 600px)
+            transform: scale(.30) perspective(2000px) rotateY(42deg) rotateX(10deg) rotateZ(-1deg)
+            top: -258px
+            left: -112px
+
+
+
+        &:hover
+            animation: desktop linear infinite alternate
+
+                
+
+    .mobile
+        border: 2px solid #0e0e0e
+        width: 360px !important
+        height: 779px !important
+        transform: scale(.35) perspective(3500px) rotateY(27deg) rotateX(25deg) rotateZ(-3deg) 
+        border-radius: 40px
+        left: -31px
+        top: 150px
+        @media screen and (max-width: 1023px)
+            transform: scale(.20) perspective(3500px) rotateY(27deg) rotateX(25deg) rotateZ(-3deg) 
+            left: -92px
+            top: 408px
+
+        @media screen and (max-width: 600px)
+            transform: scale(.12) perspective(3500px) rotateY(27deg) rotateX(25deg) rotateZ(-3deg) 
+            top: 340px
+            left: -128px
+
+        object-position: top
+        object-fit: cover
+        position: relative
+        &:hover
+            animation: mobile linear infinite alternate
+
+    @keyframes mobile
+        0%
+            object-position: top
+            
+        100%
+            object-position: bottom
+
+    @keyframes desktop
+        0%
+            object-position: top
+            
+        100%
+            object-position: bottom
+

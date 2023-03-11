@@ -1,0 +1,265 @@
+.prices
+    width: 100%
+    height: fit-content
+    display: flex
+    justify-content: center
+    overflow: hidden
+
+    >div
+        flex-direction: column
+        border-left: 1px solid rgba(white,.1)
+        border-right: 1px solid rgba(white,.1)
+        gap: 96px
+
+        >div:nth-child(1)
+            .date
+                padding: 16px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: rgba(#505050,.3)
+                gap: 16px
+                p
+                    width: fit-content
+                    span
+                        color: #EBEBEB
+                        font-size: inherit
+
+
+        >div:nth-child(3)
+            justify-content: center
+            align-items: center
+            a
+                svg
+                    fill: #EBEBEB
+                background: #0DC143
+                transition: 1s
+                &:hover
+                    transform: scale(1.01)
+                    box-shadow: 1px 1px 32px 1px rgba(#0DC143,.35)
+                padding: 16px 64px
+                color: #EBEBEB
+                width: fit-content
+                display: flex
+                align-items: center
+                justify-content: center
+                text-decoration: none
+                font-size: 24px
+                font-weight: 600
+                gap: 8px
+
+        >div:nth-child(1),>div:nth-child(3)
+            text-align: center
+            flex-direction: column
+            display: flex
+            gap: 32px
+            p
+                width: 100%
+                max-width: 697px
+
+
+        >div:nth-child(2)
+            @media screen and (max-width: 600px)
+                gap: 64px
+                margin-top: 0px
+                flex-direction: column
+            @media screen and (min-width: 601px) and (max-width: 1024px)
+                flex-wrap: wrap
+                justify-content: center
+                align-items: center
+                .captura
+                    margin-left: 16px
+
+            display: flex
+            gap: 16px
+            margin-top: 64px
+
+            &::after
+                content: ''
+                position: relative
+                left: -50%
+                top: 750px
+                display: flex
+                width: 1px
+                height: 1px
+                background: rgba(#6F53C1,40%)
+                box-shadow: 1px 1px 250px 200px rgba(#6F53C1,50%)
+                pointer-events: none
+                z-index: -9
+
+
+
+            .landing,.captura
+                width: 500px
+                @media screen and (max-width: 600px)
+                    width: calc(100vw - 32px)
+
+                justify-content: center
+                align-items: center
+                display: flex
+                flex-direction: column
+                background: rgba(#505050,.3)
+                height: fit-content
+
+
+                .price
+                    gap: 8px
+                    display: flex
+                    flex-direction: column
+                    text-align: center
+                    .oldPrice
+                        margin-bottom: 8px
+                        font-size: 16px
+                        text-decoration: line-through
+                        color: #d1d1d1
+                        @media screen and (max-width: 600px)
+                            font-size: 13px !important
+                    .avista
+                        span
+                            color: #d1d1d1
+                        @media screen and (max-width: 600px)
+                            font-size: 18px !important
+                    .parcelado
+                        font-size: 28px
+                        @media screen and (max-width: 600px)
+                            font-size: 24px !important
+                        span
+                            color: #d1d1d1
+                            font-size: 20px
+
+                h3,.price
+                    font-size: 24px
+                    color: #EBEBEB
+                    font-weight: 600
+                    padding: 64px 0
+                    @media screen and (max-width: 600px)
+                        padding: 32px 0
+
+                a
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    text-decoration: none
+                    font-size: 24px
+                    font-weight: 700
+                    gap: 8px
+                    padding: 64px 0px
+                    color: #1C1C1C
+                    transition: all 1s
+                    svg
+                        fill: #1c1c1c
+                    @media screen and (max-width: 600px)
+                        padding: 32px 0
+
+                .checks
+                    width: 100%
+                    padding: 0 32px
+                    display: flex
+                    flex-direction: column
+
+                    svg
+                        fill:#719B8D
+
+                    span
+                        color: #d1d1d1
+                        width: 100%
+                        justify-content: center
+                        font-weight: 300
+                        border-bottom: 1px solid rgba(#7FFFD4,.1)
+                        padding: 16px 0px
+                        font-size: 18px
+                        gap: 16px
+                        display: flex
+                        align-items: center
+                        &:hover
+                            color: #EBEBEB
+                            svg
+                                fill: #71e0bb
+                
+            .landing
+                &::before
+                    content: ''
+                    position: relative
+                    left: -50%
+                    top: 150px
+                    display: flex
+                    width: 1px
+                    height: 1px
+                    background: rgba(#6F53C1,40%)
+                    box-shadow: 1px 1px 250px 200px rgba(#6F53C1,50%)
+                    @media screen and (max-width: 1024px)
+                        left: -100%
+                        
+                    pointer-events: none
+                    z-index: -9
+
+                a
+                    background: linear-gradient(to right, #7FFFD4, #e2fff5, #7FFFD4)
+                    background-size: 400% 400%
+                    transition: all 1s
+                    animation: bgLanding 8s linear infinite
+                    color: #1c1c1c
+                    svg
+                        fill: #1c1c1c
+
+
+                    @keyframes bgLanding 
+                        0%
+                            background-position: 400% 50%
+                            box-shadow: 1px 1px 32px 1px rgba(#7FFFD4,.0)
+                            
+                        
+                        50%
+                            background-position: 200% 50%
+                            box-shadow: 1px 1px 32px 1px rgba(#7FFFD4,.3)
+
+                        
+                        100%
+                            background-position: 0% 50%
+                            box-shadow: 1px 1px 32px 1px rgba(#7FFFD4,.0)
+
+
+
+
+            .captura
+                @media screen and (min-width: 1025px)
+                    margin-top: -64px
+
+                &::before
+                    content: ''
+                    position: relative
+                    right: -50%
+                    @media screen and (max-width: 1024px)
+                        right: -100%
+                    top: 350px
+                    display: flex
+                    width: 1px
+                    height: 1px
+                    background: rgba(#6F53C1,40%)
+                    box-shadow: 1px 1px 250px 200px rgba(#6F53C1,50%)
+                    pointer-events: none
+                    z-index: -9
+                a
+                    background: linear-gradient(to right, #7FE8FF, #d3f7ff, #7FE8FF)
+                    background-size: 400% 400%
+                    transition: all 1s
+                    animation: bgCaptura 8s linear infinite
+                    color: #1c1c1c
+                    svg
+                        fill: #1c1c1c
+                        // fill: #3c6e79
+
+
+                    @keyframes bgCaptura 
+                        0%
+                            background-position: 400% 50%
+                            box-shadow: 1px 1px 32px 1px rgba(#7FE8FF,.0)
+                        
+                        50%
+                            background-position: 200% 50%
+                            box-shadow: 1px 1px 32px 1px rgba(#7FE8FF,.3)
+                        
+                        100%
+                            background-position: 0% 50%
+                            box-shadow: 1px 1px 32px 1px rgba(#7FE8FF,.0)

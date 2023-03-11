@@ -1,0 +1,160 @@
+.home
+    width: 100%
+    height: fit-content
+    display: flex
+    justify-content: center
+    overflow: hidden
+
+    .lottieScroll
+        position: absolute
+        top: 768px
+        left: 50%
+        transform: translate(-50%,0%)
+        
+        @media screen and (max-width: 1279px)
+            display: none
+
+    >div
+        padding: 192px 0px 160px 0px
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+
+    @media screen and (max-width: 600px)
+        >div
+            padding: 96px 16px 64px 16px
+            gap: 16px
+
+            >div:nth-child(1)
+                order: 2
+            @media screen and (min-width: 400px) and (max-width: 600px)
+                h1
+                    width: 90%
+
+
+            >div:nth-child(2)
+                order: 1
+                align-self: flex-start
+
+    @media screen and (min-width: 601px) and (max-width: 768px)
+        >div
+            padding: 96px 16px 64px 16px
+            gap: 32px
+
+    @media screen and (min-width: 769px) and (max-width: 1279px)
+        >div
+            flex-direction: row !important
+            width: 100%
+            padding: 256px 16px 128px 16px !important
+
+
+    img
+        // border-radius: 50px 200px 0px 200px
+        height: auto
+        max-width: 535px
+        @media screen and (max-width: 600px)
+            width: 250px
+            // border-radius: 35px 150px 0px 150px
+
+        @media screen and (min-width: 769px) and (max-width: 1279px)
+            width: 100%
+
+    .image
+        &::before
+            content: ''
+            position: relative
+            left: 90%
+            display: flex
+            width: 1px
+            height: 1px
+            background: rgba(#D6C8FF,50%)
+            box-shadow: 1px 1px 250px 200px rgba(#D6C8FF,50%)
+            z-index: -9
+
+
+    .disclaimer
+        width: 600px
+        @media screen and (max-width: 600px)
+            width: 100%
+            order: 1
+
+        display: flex
+        flex-direction: column
+        gap: 16px
+
+        h1
+            span
+                font-size: inherit
+                font-weight: 900
+            font-size: 36px
+            @media screen and (max-width: 600px)
+                font-size: 20px
+
+                span
+                    font-size: inherit !important
+                
+            font-weight: 700
+
+        p
+            @media screen and (max-width: 600px)
+                font-size: 15px
+            font-size: 20px
+            font-weight: 600
+
+        a
+            margin-top: 32px
+            @media screen and (max-width: 600px)
+                margin-top: 0px
+            text-align: center
+            text-decoration: none
+            font-weight: 600
+            border: 1px solid #e9e2ff
+            animation: buttonHome 8s linear infinite
+            background: linear-gradient(to right, #1c1c1c, #574686, #1c1c1c)
+            background-size: 400% 400%
+
+            @keyframes buttonHome 
+                0%
+                    background-position: 400% 50%
+                    box-shadow: 1px 1px 32px 1px rgba(#6F53C1,.3)
+                    color: #EBEBEB
+
+                
+                50%
+                    background-position: 200% 50%
+                    box-shadow: 1px 1px 32px 1px rgba(#6F53C1,.9)
+                    color: #ebe4ff
+
+                
+                100%
+                    background-position: 0% 50%
+                    box-shadow: 1px 1px 32px 1px rgba(#6F53C1,.3)
+                    color: #EBEBEB
+
+
+
+
+            width: fit-content
+            @media screen and (max-width: 600px)
+                width: 100%
+
+            font-size: 20px
+            padding: 24px 64px
+            @media screen and (max-width: 600px)
+                padding: 16px 32px
+
+            cursor: pointer
+            transition: 0.25s
+
+            &::before
+                content: ''
+                position: relative
+                top: 150px
+                right: 200%
+                display: flex
+                z-index: -1
+                width: 1px
+                height: 1px
+                background: rgba(#D6C8FF,50%)
+                box-shadow: 1px 1px 200px 200px rgba(#D6C8FF,50%)
+                pointer-events: none

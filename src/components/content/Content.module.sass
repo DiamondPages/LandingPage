@@ -1,0 +1,41 @@
+.content
+    width: 1280px
+    height: fit-content
+    display: flex
+    z-index: 9
+    align-items: center
+    padding: 256px 0px
+
+    @media screen and (max-width: 600px)
+        width: 100vw 
+        padding: 96px 16px
+        flex-direction: column !important
+
+        img
+            width: 100%
+            height: auto
+
+
+        button
+            span
+                font-size: 16px
+
+
+        h2,h3
+            font-size: 18px !important
+            
+        p,span
+            font-size: 13px !important
+
+        a
+            font-size: 16px !important
+
+    @media screen and (min-width: 601px) and (max-width: 768px)
+        width: 100vw 
+        padding: 128px 16px !important
+        flex-direction: column !important
+
+    @media screen and (min-width: 769px) and (max-width: 1279px)
+        width: 100vw 
+        padding: 128px 16px !important
+        flex-direction: column !important
